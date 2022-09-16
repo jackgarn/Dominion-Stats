@@ -38,6 +38,47 @@ class Deck:
         self.witch = witch
         self.workshop = workshop
 
+
+        def empty(self):
+            self.copper  = 0
+            self.silver  = 0
+            self.gold  = 0
+            self.curse  = 0
+            self.estate  = 0
+            self.duchy  = 0
+            self.province  = 0
+            self.artisan  = 0
+            self.bandit  = 0
+            self.bureaucrat  = 0
+            self.cellar  = 0
+            self.chapel  = 0
+            self.councilroom  = 0
+            self.festival  = 0
+            self.gardens  = 0
+            self.harbinger  = 0
+            self.laboratory  = 0
+            self.library  = 0
+            self.market  = 0
+            self.merchant  = 0
+            self.militia  = 0
+            self.mine  = 0
+            self.moat  = 0
+            self.moneylender  = 0
+            self.poacher  = 0
+            self.remodel  = 0
+            self.sentry  = 0
+            self.smithy  = 0
+            self.throneroom  = 0
+            self.vassal  = 0
+            self.village  = 0
+            self.witch  = 0
+            self.workshop  = 0
+
+        def gain(self, char):
+            if char == 'copper':
+                self.copper +=1
+
+
 def GetFile():
     return input('Enter file name: ')
 
@@ -134,13 +175,17 @@ def DisplayGameArray(arr):
         print(line)
 
 def MakeDecks(gameArray,playerArray):
-
+#makes decks
     deckarr = []
     for player in playerArray:
         deck = Deck
+        deck.empty()
         deckarr.append(deck)
 
     return deckarr
+
+#def UpdateDecks(deckArr):
+
 
 
 
@@ -156,4 +201,6 @@ game = FixGameArray(game,players)
 DisplayGameArray(game)
 
 decks = MakeDecks(game,players)
+
+#decks = UpdateDecks(decks)
 
