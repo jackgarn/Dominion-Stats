@@ -1,0 +1,66 @@
+        if self.Copper > 0:
+            print(self.Copper,' Coppers')
+        if self.Silver > 0:
+            print(self.Silver,' Silvers')
+        if self.old > 0:
+            print(self.old,' olds')
+        if self.curse > 0:
+            print(self.curse,' curses')
+        if self.estate > 0:
+            print(self.estate,' estates')
+        if self.duchy > 0:
+            print(self.duchy,' duchys')
+        if self.province > 0:
+            print(self.province,' provinces')
+        if self.artisan > 0:
+            print(self.artisan,' artisans')
+        if self.bandit > 0:
+            print(self.bandit,' bandits')
+        if self.bureaucrat > 0:
+            print(self.bureaucrat,' bureaucrats')
+        if self.cellar > 0:
+            print(self.cellar,' cellars')
+        if self.chapel > 0:
+            print(self.chapel,' chapels')
+        if self.councilroom > 0:
+            print(self.councilroom,' councilrooms')
+        if self.festival > 0:
+            print(self.festival,' festivals')
+        if self.gardens > 0:
+            print(self.gardens,' gardenss')
+        if self.harbinger > 0:
+            print(self.harbinger,' harbingers')
+        if self.laboratory > 0:
+            print(self.laboratory,' laboratorys')
+        if self.library > 0:
+            print(self.library,' librarys')
+        if self.market > 0:
+            print(self.market,' markets')
+        if self.merchant > 0:
+            print(self.merchant,' merchants')
+        if self.militia > 0:
+            print(self.militia,' militias')
+        if self.mine > 0:
+            print(self.mine,' mines')
+        if self.moat > 0:
+            print(self.moat,' moats')
+        if self.moneylender > 0:
+            print(self.moneylender,' moneylenders')
+        if self.poacher > 0:
+            print(self.poacher,' poachers')
+        if self.remodel > 0:
+            print(self.remodel,' remodels')
+        if self.sentry > 0:
+            print(self.sentry,' sentrys')
+        if self.smithy > 0:
+            print(self.smithy,' smithys')
+        if self.throneroom > 0:
+            print(self.throneroom,' thronerooms')
+        if self.vassal > 0:
+            print(self.vassal,' vassals')
+        if self.village > 0:
+            print(self.village,' villages')
+        if self.witch > 0:
+            print(self.witch,' witchs')
+        if self.workshop > 0:
+            print(self.workshop,' workshops')
