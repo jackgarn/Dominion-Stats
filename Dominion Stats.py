@@ -142,11 +142,11 @@ class Deck:
             self.workshop += 1
 
     def display(self):
-        if self.Copper > 0:
+        if self.copper > 0:
             print(self.copper,' Coppers')
-        if self.Silver > 0:
+        if self.silver > 0:
             print(self.silver,' Silvers')
-        if self.old > 0:
+        if self.gold > 0:
             print(self.gold,' Golds')
         if self.curse > 0:
             print(self.curse,' Curses')
@@ -327,13 +327,18 @@ def UpdateDecks(deckArr,gameArr,playerArr):
             if line[i] == 'gains':#if a player gained something
                 #we need to do a bunch of things: check who, check what, check how many
                 #should be ez due to sick structure
+                print("we have found gains")
+                cardIndex = i + 2
+                playerIndex = 0
                 for player in playerArr:
                     if player == line[0]:
+                        print(player,' made said gains')
                         if line[i+1] == 'a' or line[i+1] == 'an':
-                            deckArr[player].gain(deckArr[player],line[i+2])
+                            deckArr[playerIndex].gain(deckArr[playerIndex],line[cardIndex])
                         else:
                             for num in range(int(line[i+1])):
-                                deckArr[player].gain(deckArr[player],line[i+2])
+                                deckArr[playerIndex].gain(deckArr[playerIndex],line[cardIndex])
+                    playerIndex += 1
 
     return deckArr
 
@@ -355,5 +360,5 @@ decks = MakeDecks(game,players)
 
 decks = UpdateDecks(decks,game,players)
 
-for player in decks:
+for player in range(len(decks)):
     decks[player].display(decks[player])
