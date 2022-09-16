@@ -2,7 +2,7 @@ from http.client import LineTooLong
 
 #not sure about this yet
 class Deck:
-    #is there a way to do this without it being a nuisance? I think this will be the worst part of diong it like this
+    #is there a way to do this without it being a nuisance? I think this will be the worst part of doing it like this
     def __init__(self, copper, silver, gold, curse, estate, duchy, province, artisan, bandit, bureaucrat, cellar, chapel, councilroom, festival, gardens, harbinger, laboratory, library, market, merchant, militia, mine, moat, moneylender, poacher, remodel, sentry, smithy, throneroom, vassal, village, witch, workshop):
         self.copper = copper 
         self.silver = silver
@@ -325,19 +325,15 @@ def UpdateDecks(deckArr,gameArr,playerArr):
     for line in gameArr:#look at each line
         for i in range(len(line)):#check words
             if line[i] == 'gains':#if a player gained something
-                #we need to do a bunch of things: check who, check what, check how many
-                #should be ez due to sick structure
-                print("we have found gains")
-                cardIndex = i + 2
+                #we need to do a couple of things: check who, check what, check how many
                 playerIndex = 0
                 for player in playerArr:
                     if player == line[0]:
-                        print(player,' made said gains')
                         if line[i+1] == 'a' or line[i+1] == 'an':
-                            deckArr[playerIndex].gain(deckArr[playerIndex],line[cardIndex])
+                            deckArr[playerIndex].gain(deckArr[playerIndex],line[i+2])
                         else:
                             for num in range(int(line[i+1])):
-                                deckArr[playerIndex].gain(deckArr[playerIndex],line[cardIndex])
+                                deckArr[playerIndex].gain(deckArr[playerIndex],line[i+2])
                     playerIndex += 1
 
     return deckArr
@@ -351,7 +347,6 @@ MakeLegible(filename)
 
 game = MakeGameArray(filename)
 players = MakePlayerArray(game)
-print('players: ',players)
 
 game = FixGameArray(game,players)
 #DisplayGameArray(game)
@@ -361,4 +356,6 @@ decks = MakeDecks(game,players)
 decks = UpdateDecks(decks,game,players)
 
 for player in range(len(decks)):
+    print('Player ',players[player],' final deck:\n')
     decks[player].display(decks[player])
+    print('\n')
