@@ -179,8 +179,11 @@ def MakeDecks(gameArray,playerArray):
     deckarr = []
     for player in playerArray:
         deck = Deck
-        deck.empty()
         deckarr.append(deck)
+
+    #sets deck values to zero
+    for deck in deckarr:
+        deck.empty()
 
     return deckarr
 
