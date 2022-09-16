@@ -1,5 +1,42 @@
 from http.client import LineTooLong
 
+#not sure about this yet
+class Deck:
+    #is there a way to do this without it being a nuisance? I think this will be the worst part of diong it like this
+    def __init__(self, copper, silver, gold, curse, estate, duchy, province, artisan, bandit, bureaucrat, cellar, chapel, councilroom, festival, gardens, harbinger, laboratory, library, market, merchant, militia, mine, moat, moneylender, poacher, remodel, sentry, smithy, throneroom, vassal, village, witch, workshop):
+        self.copper = copper 
+        self.silver = silver
+        self.gold = gold 
+        self.curse = curse
+        self.estate = estate 
+        self.duchy = duchy
+        self.province = province
+        self.artisan = artisan
+        self.bandit = bandit
+        self.bureaucrat = bureaucrat
+        self.cellar = cellar
+        self.chapel = chapel
+        self.councilroom = councilroom
+        self.festival = festival
+        self.gardens = gardens
+        self.harbinger = harbinger
+        self.laboratory = laboratory
+        self.library = library
+        self.market = market
+        self.merchant = merchant
+        self.militia = militia
+        self.mine = mine
+        self.moat = moat
+        self.moneylender = moneylender
+        self.poacher = poacher
+        self.remodel = remodel
+        self.sentry = sentry
+        self.smithy = smithy 
+        self.throneroom = throneroom 
+        self.vassal = vassal 
+        self.village = village
+        self.witch = witch
+        self.workshop = workshop
 
 def GetFile():
     return input('Enter file name: ')
@@ -96,56 +133,27 @@ def DisplayGameArray(arr):
     for line in arr:
         print(line)
 
-#not sure about this yet
-class Deck:
-    #is there a way to do this without it being a nuisance? I think this will be the worst part of diong it like this
-    def __init__(self, copper, silver, gold, curse, estate, duchy, province, artisan, bandit, bureaucrat, cellar, chapel, councilroom, festival, gardens, harbinger, laboratory, library, market, merchant, militia, mine, moat, moneylender, poacher, remodel, sentry, smithy, throneroom, vassal, village, witch, workshop):
-        self.copper = copper 
-        self.silver = silver
-        self.gold = gold 
-        self.curse = curse
-        self.estate = estate 
-        self.duchy = duchy
-        self.province = province
-        self.artisan = artisan
-        self.bandit = bandit
-        self.bureaucrat = bureaucrat
-        self.cellar = cellar
-        self.chapel = chapel
-        self.councilroom = councilroom
-        self.festival = festival
-        self.gardens = gardens
-        self.harbinger = harbinger
-        self.laboratory = laboratory
-        self.library = library
-        self.market = market
-        self.merchant = merchant
-        self.militia = militia
-        self.mine = mine
-        self.moat = moat
-        self.moneylender = moneylender
-        self.poacher = poacher
-        self.remodel = remodel
-        self.sentry = sentry
-        self.smithy = smithy 
-        self.throneroom = throneroom 
-        self.vassal = vassal 
-        self.village = village
-        self.witch = witch
-        self.workshop = workshop
+def MakeDecks(gameArray,playerArray):
 
-filename = 'legibility-test.txt'
-filename = GetFile()
+    deckarr = []
+    for player in playerArray:
+        deck = Deck
+        deckarr.append(deck)
+
+    return deckarr
+
+
+
+filename = 'fullgame.txt'
+#filename = GetFile()
 MakeLegible(filename)
+
 game = MakeGameArray(filename)
 players = MakePlayerArray(game)
 print('players: ',players)
+
 game = FixGameArray(game,players)
 DisplayGameArray(game)
-#IT WORKS
 
-
-
-
-
+decks = MakeDecks(game,players)
 
