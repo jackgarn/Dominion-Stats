@@ -2,7 +2,7 @@ from http.client import LineTooLong
 
 #not sure about this yet
 class Deck:
-    #is there a way to do this without it being a nuisance? I think this will be the worst part of diong it like this
+    #is there a way to do this without it being a nuisance? I think this will be the worst part of doing it like this
     def __init__(self, copper, silver, gold, curse, estate, duchy, province, artisan, bandit, bureaucrat, cellar, chapel, councilroom, festival, gardens, harbinger, laboratory, library, market, merchant, militia, mine, moat, moneylender, poacher, remodel, sentry, smithy, throneroom, vassal, village, witch, workshop):
         self.copper = copper 
         self.silver = silver
@@ -37,6 +37,179 @@ class Deck:
         self.village = village
         self.witch = witch
         self.workshop = workshop
+
+    def empty(self):
+        self.copper  = 0
+        self.silver  = 0
+        self.gold  = 0
+        self.curse  = 0
+        self.estate  = 0
+        self.duchy  = 0
+        self.province  = 0
+        self.artisan  = 0
+        self.bandit  = 0
+        self.bureaucrat  = 0
+        self.cellar  = 0
+        self.chapel  = 0
+        self.councilroom  = 0
+        self.festival  = 0
+        self.gardens  = 0
+        self.harbinger  = 0
+        self.laboratory  = 0
+        self.library  = 0
+        self.market  = 0
+        self.merchant  = 0
+        self.militia  = 0
+        self.mine  = 0
+        self.moat  = 0
+        self.moneylender  = 0
+        self.poacher  = 0
+        self.remodel  = 0
+        self.sentry  = 0
+        self.smithy  = 0
+        self.throneroom  = 0
+        self.vassal  = 0
+        self.village  = 0
+        self.witch  = 0
+        self.workshop  = 0
+
+    def gain(self, char):
+        if char == 'Copper':
+            self.copper += 1
+        if char == 'Silver':
+            self.silver += 1
+        if char == 'Gold':
+            self.gold += 1
+        if char == 'Curse':
+            self.curse += 1
+        if char == 'Estate':
+            self.estate += 1
+        if char == 'Duchy':
+            self.duchy += 1
+        if char == 'Province':
+            self.province += 1
+        if char == 'Artisan':
+            self.artisan += 1
+        if char == 'Bandit':
+            self.bandit += 1
+        if char == 'Bureaucrat':
+            self.bureaucrat += 1
+        if char == 'Cellar':
+            self.cellar += 1
+        if char == 'Chapel':
+            self.chapel += 1
+        if char == 'Councilroom':
+            self.councilroom += 1
+        if char == 'Festival':
+            self.festival += 1
+        if char == 'Gardens':
+            self.gardens += 1
+        if char == 'Harbinger':
+            self.harbinger += 1
+        if char == 'Laboratory':
+            self.laboratory += 1
+        if char == 'Library':
+            self.library += 1
+        if char == 'Market':
+            self.market += 1
+        if char == 'Merchant':
+            self.merchant += 1
+        if char == 'Militia':
+            self.militia += 1
+        if char == 'Mine':
+            self.mine += 1
+        if char == 'Moat':
+            self.moat += 1
+        if char == 'Moneylender':
+            self.moneylender += 1
+        if char == 'Poacher':
+            self.poacher += 1
+        if char == 'Remodel':
+            self.remodel += 1
+        if char == 'Sentry':
+            self.sentry += 1
+        if char == 'Smithy':
+            self.smithy += 1
+        if char == 'Throneroom':
+            self.throneroom += 1
+        if char == 'Vassal':
+            self.vassal += 1
+        if char == 'Village':
+            self.village += 1
+        if char == 'Witch':
+            self.witch += 1
+        if char == 'Workshop':
+            self.workshop += 1
+
+    def display(self):
+        if self.copper > 0:
+            print(self.copper,' Coppers')
+        if self.silver > 0:
+            print(self.silver,' Silvers')
+        if self.gold > 0:
+            print(self.gold,' Golds')
+        if self.curse > 0:
+            print(self.curse,' Curses')
+        if self.estate > 0:
+            print(self.estate,' Estates')
+        if self.duchy > 0:
+            print(self.duchy,' Duchies')
+        if self.province > 0:
+            print(self.province,' Provinces')
+        if self.artisan > 0:
+            print(self.artisan,' Artisans')
+        if self.bandit > 0:
+            print(self.bandit,' Bandits')
+        if self.bureaucrat > 0:
+            print(self.bureaucrat,' Bureaucrats')
+        if self.cellar > 0:
+            print(self.cellar,' Cellars')
+        if self.chapel > 0:
+            print(self.chapel,' Chapels')
+        if self.councilroom > 0:
+            print(self.councilroom,' Councilrooms')
+        if self.festival > 0:
+            print(self.festival,' Festivals')
+        if self.gardens > 0:
+            print(self.gardens,' Gardenss')
+        if self.harbinger > 0:
+            print(self.harbinger,' Harbingers')
+        if self.laboratory > 0:
+            print(self.laboratory,' Laboratories')
+        if self.library > 0:
+            print(self.library,' Libraries')
+        if self.market > 0:
+            print(self.market,' Markets')
+        if self.merchant > 0:
+            print(self.merchant,' Merchants')
+        if self.militia > 0:
+            print(self.militia,' Militias')
+        if self.mine > 0:
+            print(self.mine,' Mines')
+        if self.moat > 0:
+            print(self.moat,' Moats')
+        if self.moneylender > 0:
+            print(self.moneylender,' Moneylenders')
+        if self.poacher > 0:
+            print(self.poacher,' Poachers')
+        if self.remodel > 0:
+            print(self.remodel,' Remodels')
+        if self.sentry > 0:
+            print(self.sentry,' Sentries')
+        if self.smithy > 0:
+            print(self.smithy,' Smithies')
+        if self.throneroom > 0:
+            print(self.throneroom,' Thronerooms')
+        if self.vassal > 0:
+            print(self.vassal,' Vassals')
+        if self.village > 0:
+            print(self.village,' Villages')
+        if self.witch > 0:
+            print(self.witch,' Witches')
+        if self.workshop > 0:
+            print(self.workshop,' Workshops')
+
+
 
 def GetFile():
     return input('Enter file name: ')
@@ -134,13 +307,37 @@ def DisplayGameArray(arr):
         print(line)
 
 def MakeDecks(gameArray,playerArray):
-
+#makes decks
     deckarr = []
     for player in playerArray:
         deck = Deck
         deckarr.append(deck)
 
+    #sets deck values to zero
+    for deck in deckarr:
+        deck.empty(deck)
+
     return deckarr
+
+def UpdateDecks(deckArr,gameArr,playerArr):
+    #time to get down to business
+    #I think we should just look through the game for gains
+    for line in gameArr:#look at each line
+        for i in range(len(line)):#check words
+            if line[i] == 'gains':#if a player gained something
+                #we need to do a couple of things: check who, check what, check how many
+                playerIndex = 0
+                for player in playerArr:
+                    if player == line[0]:
+                        if line[i+1] == 'a' or line[i+1] == 'an':
+                            deckArr[playerIndex].gain(deckArr[playerIndex],line[i+2])
+                        else:
+                            for num in range(int(line[i+1])):
+                                deckArr[playerIndex].gain(deckArr[playerIndex],line[i+2])
+                    playerIndex += 1
+
+    return deckArr
+
 
 
 
@@ -150,10 +347,15 @@ MakeLegible(filename)
 
 game = MakeGameArray(filename)
 players = MakePlayerArray(game)
-print('players: ',players)
 
 game = FixGameArray(game,players)
-DisplayGameArray(game)
+#DisplayGameArray(game)
 
 decks = MakeDecks(game,players)
 
+decks = UpdateDecks(decks,game,players)
+
+for player in range(len(decks)):
+    print('Player ',players[player],' final deck:\n')
+    decks[player].display(decks[player])
+    print('\n')
